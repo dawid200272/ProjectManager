@@ -1,6 +1,14 @@
+using ProjectManager.Application;
+using ProjectManager.Infrastructure;
+using ProjectManager.WebApi;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure();
+builder.Services.AddWebApi();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
